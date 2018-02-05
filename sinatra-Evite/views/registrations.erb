@@ -1,0 +1,15 @@
+<h3>These are the registrations!</h3>
+<ol>
+  <% i = 0 %>
+<% @registrations.each do |reg| %>
+	<li>
+    ......
+		<strong><%= reg.person_id %></strong>
+    .....
+    <%= reg.event_id %>
+    .....
+    <%= reg.status %>
+	</li>
+<% end %>
+</ol>
+<a href="/registration/new">Hello go back to add a new one!</a>

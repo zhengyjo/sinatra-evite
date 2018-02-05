@@ -1,0 +1,23 @@
+2018-02-01 14:14:30.639 EST [94141] LOG:  listening on IPv6 address "::1", port 5432
+2018-02-01 14:14:30.639 EST [94141] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-02-01 14:14:30.640 EST [94141] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-02-01 14:14:30.652 EST [94142] LOG:  database system was shut down at 2018-02-01 14:13:58 EST
+2018-02-01 14:14:30.655 EST [94141] LOG:  database system is ready to accept connections
+2018-02-01 14:14:37.447 EST [94162] FATAL:  database "development" does not exist
+2018-02-01 14:15:45.395 EST [94195] ERROR:  relation "models" does not exist at character 566
+2018-02-01 14:15:45.395 EST [94195] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"models"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-02-03 10:57:42.993 EST [94141] LOG:  received fast shutdown request
+2018-02-03 10:57:42.994 EST [94141] LOG:  aborting any active transactions
+2018-02-03 10:57:42.996 EST [94141] LOG:  worker process: logical replication launcher (PID 94148) exited with exit code 1
+2018-02-03 10:57:42.997 EST [94143] LOG:  shutting down
+2018-02-03 10:57:43.008 EST [94141] LOG:  database system is shut down

@@ -1,0 +1,33 @@
+<form action="/registrations/submit" method="post">
+  <label for="person_id">Select a Person</label>
+  <select id='person_id' name="registration[person_id]" type='text'>
+    <% @persons.each() do |per| %>
+      <option value="<%= per.id()%>"> <%= per.name() %> </option>
+    <% end %>
+  </select>
+
+  <label for="event_id">Select an event</label>
+  <select id='event_id' name="registration[event_id]" type='text'>
+    <% @events.each() do |event| %>
+      <option value="<%= event.id()%>"> <%= event.name() %> </option>
+    <% end %>
+  </select>
+
+
+  <label for="status">Status of the registration</label>
+  <select id='status' name="registration[status]" type='text'>
+    <option value="<%= 'coming'%>"> <%= 'coming' %> </option>
+    <option value="<%= 'not coming'%>"> <%= 'not coming' %> </option>
+    <option value="<%= 'maybe'%>"> <%= 'maybe' %> </option>
+  </select>
+
+  <input type="submit" value="Submit" />
+</form>
+
+<% if @errors %>
+<div id="errors">
+    <% @errors.each do |e| %>
+       <p><%= e %></p>
+    <% end %>
+</div>
+<% end %>

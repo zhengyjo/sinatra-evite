@@ -1,0 +1,13 @@
+<h3>These are the Events!</h3>
+<ol>
+  <% i = 0 %>
+<% @events.each do |eve| %>
+	<li>
+    ......
+		<strong><%= eve.name %></strong>
+    .....
+    <%= eve.date %>
+	</li>
+<% end %>
+</ol>
+<a href="/event/new">Hello go back to add a new one!</a>

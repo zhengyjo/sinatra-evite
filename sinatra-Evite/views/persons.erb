@@ -1,0 +1,17 @@
+<h3>These are the Persons!</h3>
+<ol>
+  <% i = 0 %>
+<% @persons.each do |pers| %>
+	<li>
+    ......
+		<strong><%= pers.name %></strong>
+    .....
+    <%= pers.date_of_birth %>
+    .....
+    <%= pers.gender %>
+    .....
+    <%= pers.zipcode %>
+	</li>
+<% end %>
+</ol>
+<a href="/person/new">Hello go back to add a new one!</a>
