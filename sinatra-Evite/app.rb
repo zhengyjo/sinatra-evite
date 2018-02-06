@@ -46,8 +46,6 @@ end
 get '/registration/new' do
   @persons = Person.all
   @events = Event.all
-  @errors = session[:errors]
-  puts @errors.to_s
   erb :new_registration
 end
 

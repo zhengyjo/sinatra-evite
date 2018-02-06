@@ -4,7 +4,7 @@ class CreatePerson < ActiveRecord::Migration[5.1]
       t.string :name
       t.date :date_of_birth
       t.string :gender
-      t.integer :zipcode
+      t.string :zipcode
     end
   end
 end

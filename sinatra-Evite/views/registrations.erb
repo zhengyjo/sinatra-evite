@@ -4,10 +4,13 @@
 <% @registrations.each do |reg| %>
 	<li>
     ......
-		<strong><%= reg.person_id %></strong>
+    <strong><%= Person.find(reg.person_id).name %></strong>
+		(<strong><%= reg.person_id %></strong>)
     .....
-    <%= reg.event_id %>
+    <%= Event.find(reg.event_id).name %>
+    (<%= reg.event_id %>)
     .....
+    Status:
     <%= reg.status %>
 	</li>
 <% end %>
