@@ -30,6 +30,11 @@ Run “ruby a.rb -p [port number]” on terminal
 ## New Idea:
   In the future I will update the form in the creation of registration as autocomplete select box, which will invole the combination of ruby and jquery/javascript
 
+## Special notes:
+When creating person and event, it will check the uniqueness of the name
+When creating registration, it will check the uniqueness of the combination of all three fields
+If validation fails, then it will lead to a error prompt page
+
 ## Testing:
         All the testing file is under spec folder
 
