@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180203183853) do
     t.string "name"
     t.date "date_of_birth"
     t.string "gender"
-    t.integer "zipcode"
+    t.string "zipcode"
   end
 
   create_table "registrations", force: :cascade do |t|

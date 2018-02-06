@@ -5,6 +5,12 @@ require_relative 'models/person'
 require_relative 'models/event'
 require_relative 'models/registration'
 
+#Home page
+get '/' do
+	erb :index
+end
+
+# Here to add a person and show all the people
 get '/person/new' do
   erb :new_person
 end
@@ -14,8 +20,13 @@ post '/persons/submit' do
   if @person.save
     redirect '/persons'
   else
-    "Sorry, there was an error!"
+    #{}"Sorry, there was an error!"
+    redirect '/persons/err'
   end
+end
+
+get '/persons/err' do
+	erb :person_err
 end
 
 get '/persons' do
@@ -33,13 +44,17 @@ post '/events/submit' do
   if @event.save
     redirect '/events'
   else
-    "Sorry, there was an error!"
+    redirect '/events/err'
   end
 end
 
 get '/events' do
   @events = Event.all
   erb :events
+end
+
+get '/events/err' do
+	erb :event_err
 end
 
 # Here to add an registraion and show all the registrations
@@ -54,8 +69,12 @@ post '/registrations/submit' do
   if @reg.save
     redirect '/registrations'
   else
-    "Sorry, there was an error!"
+    redirect '/registrations/err'
   end
+end
+
+get '/registrations/err' do
+	erb :registration_err
 end
 
 get '/registrations' do
