@@ -14,13 +14,13 @@ Run “ruby a.rb -p [port number]” on terminal
 
 
 ## page introduction
-At the url ./    This is the homepage
-At the url ./persons list all the persons
-At the url ./events list all the events
-At the url ./registrations list all the registrations
-At the url ./person/new: display a form allowing the creation of a person
-At the url ./event/new: display a form allowing the creation of a event
-At the url ./registration/new: display a form allowing the creation of a registrations
+        At the url ./    This is the homepage
+        At the url ./persons list all the persons
+        At the url ./events list all the events
+        At the url ./registrations list all the registrations
+        At the url ./person/new: display a form allowing the creation of a person
+        At the url ./event/new: display a form allowing the creation of a event
+        At the url ./registration/new: display a form allowing the creation of a registrations
 
 ## New Idea:
         In the future I will 
